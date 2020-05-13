@@ -1,0 +1,8952 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>sih, household file</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h2>sih, household file</h2>
+
+<h2>Variables in the dataset</h2>
+
+<p>r options(KNITR_PROGRESS = FALSE)
+New variable names have been created for each variable in the dataset.</p>
+
+<p>Variable names are first assigned using the data dictionary.</p>
+
+<p>Where there is no variable name in the dictionary, the original name is used, along with the most recent year in which the variable name and label are identical to the current year.</p>
+
+<h3>id_hh</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> abshid </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Unique household number </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>weight</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> sihhhwt </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weight - HH (SIH) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>equiv_hh</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> equivh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> HH equivalising factor </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>age</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> agerhec </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Age of HH reference person </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>persons</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> pershbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>persons_15_plus</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nomemhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons aged 15 years and over in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>family_composition</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dcomph </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Family composition of household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_total_0506</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> inctsch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Total current weekly HH income from all sources (2005-06 basis) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_total_0708</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> inctsch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Total current weekly HH income from all sources </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_disposable_0506</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dispsch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH disposable income (2005-06 basis) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_disposable_0708</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dispsch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH disposable income </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wealth_net</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wealthh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Net wealth of household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_credit_card</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liaccch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount of credit card debt - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_help</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liahecch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount of HECS/HELP liability - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_investment</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liainvch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on investment loans (excl business and rental property loans) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_inv_prop</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liaopch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on loans for other property (excl business and investment loans) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_loans</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liaotch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on loans for other purposes (excl business and investment loans) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_inv_prop_oth</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liarpch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on rental property loans </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_home</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liasdch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on loans for selected dwelling </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_student</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liasfsch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount of Student Financial Supplement liability - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>liability_car</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> liavech </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on loans for vehicle purchases (excl business and investment loans) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_house</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hvaluech </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Estimated sale price of dwelling - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_contents</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vcontch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of contents of selected dwelling </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_bonds</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vdebch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of debentures and bonds - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_bank_deposit</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vfinch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of accounts held with financial institutions (excl offset accounts) - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_business</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vibusch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of own incorporated business (net of liabilities) - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_investments</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vinvotch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of other financial investments - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_non_res_prop</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vnrprch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of non-residential property </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_offset</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> voftch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of offset accounts - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_other</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> votassch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of assets nec </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_loans</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vplnch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of loans to persons not in the same household - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_trust_private</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vprtch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of private trust - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_trust_public</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vputch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of public unit trusts - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_house_oth</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vrprch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of residential property excl selected dwelling </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_shares</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vsharch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of shares - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_partnership</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vsipch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of silent partnerships - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_business_unincorp</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vubusch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of own unincorporated business (net of liabilities) - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>asset_car</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vvehich </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Value of vehicles </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>rent_imputed</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> grossir </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly gross imputed rent - IR </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>rent_imputed_net</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> netir </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly HH income from net imputed rent - IR </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_employee_0708</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iwsuch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH employee income </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_uninc_business</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iobtch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from own unincorporated business </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_investments_0708</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> invesch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from investments </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_pensions_allowances_0708</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> itgcbch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from government pensions and allowances </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_super</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> isuperch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from superannuation/annuity/private pension </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_other_sources</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> othsrch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from other regular sources (excluding superannuation) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>income_other_sources_incl_WC</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> othsrch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from other regular sources (excluding superannuation) (incl WC lump sums) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>tenure</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> tenurecf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Tenure type - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>rent</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wkrentch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly rent payments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>housing_costs</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hcostsh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly housing costs (SIHC basis) - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>housing_landlord_type</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ldlrdhcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Landlord type - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>state</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> statehec </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> State or Territory of usual residence 2011 </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>housing_bedrooms_spare</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hutilchc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Housing Appropriateness (Canadian National Occupancy Standard) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>agekidh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> agekidh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Age of youngest dependent child in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>aourbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> aourbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Area of usual residence ASGS 2011 (GCCSA) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>bcorpgch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> bcorpgch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly body corporate payments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>bcorprch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> bcorprch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly body corporate payments with refunds deducted - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>cradisp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> cradisp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH disposable income (excluding CRA) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>cwfinsph_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> cwfinsph </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly financial support provided to family members not in the household - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>cwkcrah_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> cwkcrah </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH amount of Rent Assistance </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dben_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dben </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household total social assistance benefits in cash </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dep1524b_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dep1524b </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of dependent children aged 15 to 24 years in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dincst_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dincst </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly household disposable income plus STIK (incl imputed rent net of STIK) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>disbhh1_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> disbhh1 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether someone in the household aged 15 and over has a disability or long-term health condition </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dncpribc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dncpribc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending Catholic primary school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dncsecbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dncsecbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending Catholic secondary school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dnfamcf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dnfamcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of families in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dngprebc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dngprebc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending preschool </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dngpribc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dngpribc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending government primary school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dngsecbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dngsecbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending government secondary school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dnhccbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dnhccbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household covered by a health care card </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dniuhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dniuhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of income units in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dnogprbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dnogprbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending other non-government primary school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dnogsebc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dnogsebc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household attending other non-government secondary school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dnterfbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dnterfbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household undertaking full-time tertiary studies </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dnterpbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dnterpbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household undertaking part-time tertiary studies </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dpcmpbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dpcmpbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of pension/benefit recipients in the household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dpkidhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dpkidhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of dependents aged under 25 years in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dsmkhh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dsmkhh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether any daily smokers in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dsscshcb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dsscshcb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household covered by a Centrelink Commonwealth seniors health card </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dsshcchb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dsshcchb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household covered by a Centrelink health care card </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dsspcchb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dsspcchb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household covered by a Centrelink pension concession card </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>dweltcf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> dweltcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Dwelling structure - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>edter_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> edter </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for tertiary education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>edub_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> edub </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household total social transfers in kind for education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>educft_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> educft </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for full-time university education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>educpt_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> educpt </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for part-time university </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>eductft_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> eductft </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for full-time TAFE education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>eductpt_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> eductpt </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for part-time TAFE education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>famcomp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> famcomp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Family composition of HH (alternative) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>femhhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> femhhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of females in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>finscoph_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> finscoph </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Household previous financial year exclusion flag </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>fsthhcf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> fsthhcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether dwelling purchased/built in last 3 years is first home owned - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>furn_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> furn </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether rented dwelling is furnished </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hcostsh2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hcostsh2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly housing costs (aft rfnds, int only, incl body corp, loans prorated by purp, no ten adj) - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hcostsh3_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hcostsh3 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly housing costs (no tenure adjustment) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hcostsh4_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hcostsh4 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Alternate Weekly housing costs (excluding RA) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hinsmodh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hinsmodh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly expenditure for house insurance payments (modelled) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hvalpric_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hvalpric </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Purchase price of dwelling (for dwellings purchased/built in the previous 3 years) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hvalprwd_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hvalprwd </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Purchase price of dwelling (with deduc inc) (for dwellings purchased/built in the previous 3 years) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>hwelb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> hwelb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for welfare (excluding child care assistance) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>iben_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iben </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household total social transfers in kind </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impastal_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impastal </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module AIOSTAT </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impcrnt_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impcrnt </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module CRENT </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impdten_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impdten </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module DWELTEN </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impdwlp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impdwlp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module DWELANPUR </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impdwre_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impdwre </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module DWELREP </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impdwrt_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impdwrt </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module DWELRENT </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impfiacl_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impfiacl </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module FIACE </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>imphengy_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> imphengy </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module DWELSTR2 </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>imphldi_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> imphldi </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module HLDINLITE </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impliai_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impliai </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module INVLOAN </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impliar_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impliar </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module RENTLOAN </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impnostl_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impnostl </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module NOSTAT </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impnstal_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impnstal </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module AIONOSTAT </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impohht_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impohht </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module OTHHTEN </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impopva_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impopva </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module OPVAL </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impphia_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impphia </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module PHI </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>imprata_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> imprata </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module RATAXS </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impstatl_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impstatl </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module STAT </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>imputehh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> imputehh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Flag to indicate household level imputation </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>imputphh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> imputphh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Flag to indicate household contains person level imputation </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>impvhval_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> impvhval </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Imputation flag for HH module VEHVALU </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>investch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> investch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from investments (2005-06 basis) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>iobtchf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iobtchf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from own unincorporated business flag </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>iobtph_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iobtph </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Previous financial year HH income from own unincorporated business </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>iobtphf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iobtphf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Previous financial year HH income from own unincorporated business flag </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>itgcbch6_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> itgcbch6 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH income from government pensions and allowances (2005-06 basis) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>iwssuch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> iwssuch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly HH employee income (2005-06 basis) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ksuppch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ksuppch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Current weekly payments for child support/maintenance (incl spousal maintenance) - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>lalldch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> lalldch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Principal outstanding on all loans secured against selected dwelling </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>lerflag_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> lerflag </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Low economic resource household flag </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>levelhh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> levelhh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>lfsrh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> lfsrh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Labour force status of household reference person </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>lifecych_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> lifecych </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Life cycle group - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>malehhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> malehhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of males in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>newdwlh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> newdwlh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether dwelling purchased/built in last 3 years was new or established - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>nocchhb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nocchhb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of credit cards - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>noearnbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> noearnbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of earners in the household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>noemphbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> noemphbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of employed persons in the household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>nondepbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nondepbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of non-dependent children in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>nonfhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nonfhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of non-family members in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>nouemhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nouemhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of unemployed persons in the household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>nrbedscf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nrbedscf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of bedrooms - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>nsmkhh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> nsmkhh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of daily smokers in household (continuous) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numcatbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numcatbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household aged 15-19 years attending a Catholic school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numgovbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numgovbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household aged 15-19 years attending a government school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numnrpcf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numnrpcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of non-residential properties owned </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numothbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numothbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of persons in household aged 15-19 years attending an other non-government school </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numrpcf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numrpcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of residential properties owned (excl selected dwelling) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numrpf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numrpf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether the household owns residential property (excl selected dwelling) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numrprcf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numrprcf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of residential properties owned (excl selected dwelling) that are rented out </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>numu15bc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> numu15bc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of dependent children aged under 15 years in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>oldkidh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> oldkidh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Age of oldest dependent child in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>otrelhbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> otrelhbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of other relatives in household </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>pinc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> pinc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household private income (incl imputed rent net of STIK) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>pinc2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> pinc2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household private income (incl imputed rent) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>psrcsch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> psrcsch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Main source of current HH income (2005-06 basis) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>psrcsch8_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> psrcsch8 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Main source of current HH income </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>qtritrwh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> qtritrwh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Quarter of interview </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ratercch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ratercch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly combined rates payments with refunds deducted - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ratergch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ratergch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly general rates payments with refunds deducted - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>raterwch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> raterwch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly water rates payments with refunds deducted - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ratescch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ratescch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly combined rates payments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ratesch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ratesch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly general and water rates payments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ratesgch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ratesgch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly general rates payments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ratesrch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ratesrch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly general and water rates payments with refunds deducted - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>rateswch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> rateswch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly water rates payments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>s1524hbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> s1524hbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of full-time and part-time students in household aged 15 to 24 years </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>s2599hbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> s2599hbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Number of full-time and part-time students in household aged 25 years and over </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>sexrh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> sexrh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Sex of HH reference person </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>soleng_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> soleng </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Whether have solar panels to generate electricity </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>tben_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> tben </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Total weekly household social assistance benefits in cash or in kind </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>tint1ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> tint1ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments to purchase/build (int component with refunds deducted) - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>tint2ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> tint2ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments alterations/additions (int component with refunds deducted) HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>tint3ach_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> tint3ach </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments for other purposes (int with refunds deducted) - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>tint4ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> tint4ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly repayments on unsecured loans for housing purposes (int with refunds deducted)-HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>totwelfb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> totwelfb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for welfare </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe1c2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe1c2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on mortgages to purchase/build - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe1ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe1ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on mortgages to purchase/build - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe2c2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe2c2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on mortgages for alterations/additions - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe2ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe2ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on mortgages for alterations/additions - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe3ac2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe3ac2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on mortgages for other purposes (excl business and investment loans) - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe3ach_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe3ach </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on mortgages for other purposes (excl business and investment loans) - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe4c2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe4c2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on unsecured loans for housing purposes - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe4ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe4ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on unsecured loans for housing purposes - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>towe5ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> towe5ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Amount owing on housing loans incl. for other purposes </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpa3ac2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpa3ac2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments for other purposes (excl business and investment loans) - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpa3ach_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpa3ach </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments other purposes (excl bus and inv) - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpa3arf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpa3arf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments other purposes refunds deducted (excl bus and inv loans) - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay1c2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay1c2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments to purchase/build - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay1ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay1ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments to purchase/build - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay1rf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay1rf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments to purchase/build with refunds deducted - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay2c2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay2c2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments for alterations/additions - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay2ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay2ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments for alterations/additions - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay2rf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay2rf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments for alterations/additions with refunds deducted - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay4c2_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay4c2 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly repayments on unsecured loans for housing purposes - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay4ch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay4ch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly repayments on unsecured loans for housing purposes - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpay4rf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpay4rf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly repayments on unsecured loans for housing purposes with refunds deducted - HH (prorata) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>trpaych_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> trpaych </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly mortgage repayments - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uebcogp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uebcogp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for primary school education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uebcp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uebcp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for Catholic primary school education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uebgp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uebgp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for government primary school education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uebop_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uebop </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for other independent primary school education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>ueboth_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ueboth </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for other education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uebps_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uebps </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for preschool education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uebscl_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uebscl </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for school education </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uhlconf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uhlconf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for community health services (excl PHIR) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uhlhos_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uhlhos </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for acute care institutions </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uhlpub_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uhlpub </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for other health services </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uhlscr_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uhlscr </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for pharmaceuticals </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uhltot_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uhltot </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household total social transfers in kind for health </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>uhseb1_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> uhseb1 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for government renters </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>vtottch_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> vtottch </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Total value of trusts - household level </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs01_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs01 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (01) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs02_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs02 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (02) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs03_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs03 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (03) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs04_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs04 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (04) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs05_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs05 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (05) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs06_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs06 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (06) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs07_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs07 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (07) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs08_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs08 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (08) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs09_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs09 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (09) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs10_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs10 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (10) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs11_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs11 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (11) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs12_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs12 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (12) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs13_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs13 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (13) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs14_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs14 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (14) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs15_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs15 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (15) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs16_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs16 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (16) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs17_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs17 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (17) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs18_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs18 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (18) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs19_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs19 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (19) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs20_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs20 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (20) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs21_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs21 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (21) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs22_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs22 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (22) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs23_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs23 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (23) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs24_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs24 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (24) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs25_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs25 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (25) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs26_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs26 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (26) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs27_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs27 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (27) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs28_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs28 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (28) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs29_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs29 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (29) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs30_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs30 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (30) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs31_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs31 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (31) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs32_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs32 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (32) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs33_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs33 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (33) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs34_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs34 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (34) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs35_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs35 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (35) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs36_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs36 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (36) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs37_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs37 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (37) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs38_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs38 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (38) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs39_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs39 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (39) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs40_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs40 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (40) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs41_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs41 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (41) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs42_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs42 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (42) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs43_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs43 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (43) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs44_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs44 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (44) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs45_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs45 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (45) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs46_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs46 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (46) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs47_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs47 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (47) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs48_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs48 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (48) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs49_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs49 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (49) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs50_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs50 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (50) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs51_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs51 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (51) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs52_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs52 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (52) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs53_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs53 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (53) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs54_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs54 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (54) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs55_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs55 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (55) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs56_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs56 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (56) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs57_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs57 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (57) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs58_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs58 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (58) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs59_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs59 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (59) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>whs60_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> whs60 </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> SIH Replicate weight - HH (60) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wklyccah_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wklyccah </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for child care assistance </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wklyccbh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wklyccbh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly HH Child Care Benefit </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wklyccrh_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wklyccrh </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly HH Child Care Rebate </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wklyelc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wklyelc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for electricity concessions </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wklyphir_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wklyphir </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly household social transfers in kind for Private Health Insurance Rebate </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wkrentrf_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wkrentrf </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly rent payments with refunds deducted - HH </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>wkrenxp_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> wkrenxp </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Weekly rental expenses (including rates but excluding CRA) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>yoahbc_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> yoahbc </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Year of arrival in Australia of HH reference person </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+<h3>yrbuyhcb_2017</h3>
+
+<p>Most recently apeared in the dataset in 2017</p>
+
+<table class="kable_wrapper">
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Survey variable name </th>
+   <th style="text-align:left;"> Year </th>
+   <th style="text-align:left;"> Variable description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> yrbuyhcb </td>
+   <td style="text-align:left;"> 2017 </td>
+   <td style="text-align:left;"> Year purchased dwelling - HH (ranged) </td>
+  </tr>
+</tbody>
+</table>
+
+<p></td>
+  </tr>
+</tbody>
+</table></p>
+
+</body>
+
+</html>

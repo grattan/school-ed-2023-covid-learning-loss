@@ -1,0 +1,12 @@
+name: shiny
+title: shiny
+username:
+account: jnolan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2291850
+bundleId: 3141763
+url: https://jnolan.shinyapps.io/shiny/
+when: 1589373852.58223
+asMultiple: FALSE
+asStatic: FALSE
