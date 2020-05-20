@@ -1,3 +1,6 @@
+#Estimating the impact of COVID-19 on future income for those who fall behind in school. 
+#COVID-book analysis. 
+
 library(tidyverse)
 library(readxl)
 library(janitor)
@@ -5,10 +8,14 @@ library(readabsmicrodata)
 library(readabs)
 library(grattan)
 
+#How many ntile groups will we eventually divide up the group into? 
 n_groupings = 10
 
+
+#Data on earnings and hours from the ABS
 abs_data <- read_abs( 6302.0) 
 
+#This is a script using jonathan nolan's readabsmicrodata package on github - it simply imports the SIH and renames the variables to something more appropriate. 
 
 sih_hh <- read_abs_microdata(survey = "sih", 
                              file = "household", 
@@ -23,6 +30,7 @@ sih_p <- read_abs_microdata(survey = "sih",
                             create_html_dictionary = FALSE) %>% 
   add_ages()
 
+#What is the ratio of each decile's earnings to average earnings? 
 
 sih_earnings_ratios <- sih_p %>% 
   left_join(sih_hh %>% select(id_hh,state)) %>% 
@@ -43,6 +51,7 @@ sih_earnings_ratios <- sih_p %>%
          n_tile,
          ratio_to_av) 
 
+#What are actual earnings (slightly different figures to the SIH data, but we assume a similar ratio. )
 
 abs_earnings <- abs_data %>%  
   filter(str_detect(series,"Earnings; Persons; Total earnings ;"),
@@ -76,7 +85,10 @@ abs_earnings <- abs_data %>%
   mutate(state = state_short) %>%
   select(-state_short)
 
+#helper function
 substringer <- function(x) {substring(x,3)}
+
+#How many students are there in Australia? 
 
 student_numbers <- read_excel("data/table 42b number of full-time and part-time students, 2006-2019.xls",
                               sheet = 3,
@@ -91,6 +103,7 @@ student_numbers <- read_excel("data/table 42b number of full-time and part-time 
   rename(state = state_territory) %>% 
   group_by(state,age) %>% 
   arrange(year) %>% 
+  #Since we don't have 2020 data - we can calculate forward using growth from 2018. 
   mutate(growth = n/lag(n)) %>%
   ungroup() %>% 
   filter(year == 2019) %>% 
@@ -99,6 +112,7 @@ student_numbers <- read_excel("data/table 42b number of full-time and part-time 
          year = 2020) %>% 
   select(-year) 
 
+#Join together earnings with student numbers to find the base dataset. 
 
 student_numbers%>% 
   full_join(abs_earnings) %>% 
@@ -106,5 +120,17 @@ student_numbers%>%
 
 
 
-  
+#Method 2 - converting pisa to GDP. Not used. 
 
+pisa_maths_aust <- 494
+pisa_math_std_dev <- 93
+one_year_of_learning <- 30
+
+low_growth_estimate  <- 0.0001	
+high_growth_estimate <- 0.0002
+
+aust_gdp <- 1814535000.0
+
+total_pisa_points_lost_aust <- one_year_of_learning*2/12
+
+total_pisa_points_lost_aust * low_growth_estimate * aust_gdp *37
