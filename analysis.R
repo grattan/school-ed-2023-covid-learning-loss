@@ -11,9 +11,13 @@ library(grattan)
 #How many ntile groups will we eventually divide up the group into? 
 n_groupings = 10
 
-
 #Data on earnings and hours from the ABS
-abs_data <- read_abs( 6302.0) 
+abs_data <- read_abs_local(path = ".\\data\\ABS\\6302.0")
+
+#Make names for relevant tables
+tables <- paste0(12, letters[1:8])
+
+abs_data_updated <- read_abs(cat_no = "6302.0", tables = tables)
 
 #This is a script using jonathan nolan's readabsmicrodata package on github - it simply imports the SIH and renames the variables to something more appropriate. 
 
@@ -53,9 +57,10 @@ sih_earnings_ratios <- sih_p %>%
 
 #What are actual earnings (slightly different figures to the SIH data, but we assume a similar ratio. )
 
-abs_earnings <- abs_data %>%  
+abs_earnings <- abs_data_updated %>%  
   filter(str_detect(series,"Earnings; Persons; Total earnings ;"),
-         series_type == "Trend") %>%
+         # series_type == "Trend"
+         ) %>%
   separate(series,c("earning", "gender","earnings_type","state","sector"),sep = ";") %>% 
   mutate(state_short = case_when(str_detect(state, "Victoria")   ~ "vic",
                                  str_detect(state, "New South")  ~ "nsw",
@@ -70,8 +75,8 @@ abs_earnings <- abs_data %>%
                            ) %>% 
   filter(!is.na(state_short),
          sector == "",
-         date == "2019-11-15") %>% 
-  merge(tibble(year = seq(2019,2100))) %>% 
+         date == "2022-05-15") %>% 
+  merge(tibble(year = seq(2022,2100))) %>% 
   group_by(state) %>% 
   mutate(year_index = year-first(year)) %>% 
   ungroup() %>% 
@@ -79,7 +84,7 @@ abs_earnings <- abs_data %>%
          state_short,
          year,
          year_index,
-         wage_original_2020 = value )%>% 
+         wage_original_2022 = value )%>% 
   merge(tibble(n_tile = seq(1,n_groupings))) %>% 
   left_join(sih_earnings_ratios) %>% 
   mutate(state = state_short) %>%
@@ -90,7 +95,7 @@ substringer <- function(x) {substring(x,3)}
 
 #How many students are there in Australia? 
 
-student_numbers <- read_excel("data/table 42b number of full-time and part-time students, 2006-2019.xls",
+student_numbers <- read_excel("data/table 42b number of full-time and part-time students, 2006-2021.xlsx",
                               sheet = 3,
                               skip = 4) %>% 
   clean_names() %>% 
@@ -103,13 +108,14 @@ student_numbers <- read_excel("data/table 42b number of full-time and part-time 
   rename(state = state_territory) %>% 
   group_by(state,age) %>% 
   arrange(year) %>% 
-  #Since we don't have 2020 data - we can calculate forward using growth from 2018. 
+  #Since we don't have 2022 data - we can calculate forward using growth from 2021. 
   mutate(growth = n/lag(n)) %>%
   ungroup() %>% 
-  filter(year == 2019) %>% 
+  filter(year == 2021) %>% 
   mutate(state = tolower(state),
+         state = str_remove(state, "\\.$"),
          n = round(n*growth),
-         year = 2020) %>% 
+         year = 2022) %>% 
   select(-year) 
 
 #Join together earnings with student numbers to find the base dataset. 
@@ -118,7 +124,10 @@ student_numbers%>%
   full_join(abs_earnings) %>% 
   write_csv("shiny/data.csv")
 
+final_dataset <- student_numbers%>% 
+  full_join(abs_earnings)
 
+table(final_dataset$state)
 
 #Method 2 - converting pisa to GDP. Not used. 
 
